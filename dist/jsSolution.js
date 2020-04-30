@@ -1,4 +1,4 @@
-const n = 11;
+const n = 4;
 
 const generateSet = (numbers) => {
   const set = []

@@ -1,10 +1,12 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <ctime>
 
 using namespace std;
 
 int n = 4;
+const clock_t begin_time = clock();
 
 vector<int> generateSet(vector<int> numbers)
 {
@@ -76,6 +78,7 @@ int main()
             numbers = getNextNumbers(numbers);
         }
     }
+    cout << "solucion: ";
     for (const auto &i: numbers)
         cout << i << ' ';
     cout << "\n";
@@ -84,9 +87,12 @@ int main()
     {
        sort(generatedSet.begin(), generatedSet.end());
     }
+    cout << "numeros generados: ";
     for (const auto &i: generatedSet)
         cout << i << ' ';
     cout << "\n";
+
+    cout << float( clock () - begin_time ) /  CLOCKS_PER_SEC << " segundos\n";
     
     return 0;
 }
