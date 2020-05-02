@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int n = 4;
+int n = 7;
 const clock_t begin_time = clock();
 
 vector<int> generateSet(vector<int> numbers)
